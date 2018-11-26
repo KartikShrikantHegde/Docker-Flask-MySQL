@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  website:
+    build: .
+    env_file:
+      - '.env'
+    ports:
+      - '8000:5000'
+
