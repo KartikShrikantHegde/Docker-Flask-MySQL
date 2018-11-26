@@ -28,4 +28,6 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD python run.py
+RUN chmod +x /Photos-Docker-Flask/docker-entrypoint.sh
+
+CMD ["/bin/bash", "/Photos-Docker-Flask/docker-entrypoint.sh"]
