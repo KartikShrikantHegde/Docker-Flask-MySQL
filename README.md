@@ -50,9 +50,11 @@ Use any of the database clients like MySQL workbench or SQLDeveloper. In my case
 
 Connect to MySQL database using the properties specified in ```docker-compose.yml``` file with host as ```localhost```.
 
-**Note:** 1. Don't use the ```MYSQL_ROOT_PASSWORD``` but the password for the db you created, i.e ```MYSQL_PASSWORD```
+**Note:** 
 
-   2. The port to be used is ```32000``` which is the port on which app is running on localhost. Don't use ```3306``` as port to connect from the client as it's the port where container is running.
+1. Don't use the ```MYSQL_ROOT_PASSWORD``` but the password for the db you created, i.e ```MYSQL_PASSWORD```
+
+2. The port to be used is ```32000``` which is the port on which app is running on localhost. Don't use ```3306``` as port to connect from the client as it's the port where container is running.
 
 Once connected, run simple commands like ```show tables``` or ```desc <<tablename>>``` to make sure table is created with exact fields specified in the Flask models.
 
