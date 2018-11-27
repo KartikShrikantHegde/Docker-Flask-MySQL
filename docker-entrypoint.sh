@@ -12,7 +12,5 @@ flask db init
 flask db migrate
 flask db upgrade
 
-#mysql -U insta_admin -d insta_db -f /docker-entrypoint-initdb.d/10-init.sql -h db
-
 cd /Photos-Docker-Flask
 python run.py

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Docker" uuid="47aa58a5-f7e9-463b-9626-0f1ed37d460d">
+    <data-source source="LOCAL" name="Docker-DB" uuid="794f6815-dcf4-41a5-8c13-eb74df96b18c">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
+      <remarks>docker database</remarks>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:32000/insta_db</jdbc-url>
       <driver-properties>
