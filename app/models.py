@@ -1,5 +1,7 @@
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime
+import string 
 
 from app import db, login_manager
 
@@ -24,3 +26,32 @@ class Department(db.Model):
     __tablename__ = 'departments'
 
     id = db.Column(db.Integer, primary_key=True)
+
+class URL(db.Model):
+    """
+    Create URL table
+    """
+
+    ___tablename___ = 'urls'
+
+    id = db.Column(db.Integer, primary_key=True)
+    original_url = db.Column(db.String(512))
+    short_url = db.Column(db.String(8), unique=True)
+    date_created = db.Column(db.DateTime, default=datetime.now)
+    visits = db.Column(db.Integer, default=0)
+
+    def __init__(self, **kwarg):
+        super().__init__(**kwarg)
+        self.short_url = 'something'
+
+    # def generate_short_url(self):
+
+
+    def base62_encoder(id):
+        characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        base = len(characters)
+        hash_str = ''
+        while id > 0:
+            hash_str = characters[id % base] + hash_str
+            id //= base
+        return hash_str
