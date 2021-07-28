@@ -34,8 +34,8 @@ class URL(db.Model):
     ___tablename___ = 'urls'
 
     id = db.Column('id_', db.Integer, primary_key=True)
-    original_url = db.Column('original', db.String())
-    short_url = db.Column('short', db.String(8), unique=True)
+    original_url = db.Column('original_url', db.String())
+    short_url = db.Column('short_url', db.String(8), unique=True)
 
     def __init__(self, **kwarg):
         super().__init__(**kwarg)
