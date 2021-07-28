@@ -21,7 +21,9 @@ def home():
       # db.session.add(new_url)
       # db.session.commit()
       # return redirect(url_for("display_short_url", url=short_url))
-
+      pass
+  else:
+    return render_template('url_page.html')
 
 @short.route('/<short_url>')
 def redirect_to_url(short_url):
@@ -31,5 +33,7 @@ def redirect_to_url(short_url):
   else:
     return f'<h1>URL does not exist</h1>'
 
-
+@short.route('/display/<url>')
+def display_short_url(url):
+    return render_template('short_url.html', short_url_display=url)
 
