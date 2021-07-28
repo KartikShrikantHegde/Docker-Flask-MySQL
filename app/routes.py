@@ -1,7 +1,7 @@
 from flask import Blueprint, redirect, url_for, render_template
 from flask.globals import request
 
-from app import db
+from .extensions import db
 from .models import URL
 from .utils import base62_decoder, base62_encoder
 
@@ -32,7 +32,7 @@ def redirect_to_url(short_url):
   if original_url:
     redirect(original_url.original)
   else:
-    return f'<h1>URL does not exist</h1>'
+    return 'URL does not exist'
 
 @short.route('/display/<url>')
 def display_short_url(url):
