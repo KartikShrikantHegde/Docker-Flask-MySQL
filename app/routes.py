@@ -10,7 +10,7 @@ short = Blueprint('short', __name__)
 @short.route('/', methods=['POST', 'GET'])
 def home():
   if request.method == 'POST':
-    url_received = request.form['nm'] # TODO - Check!!!!
+    url_received = request.form['nm']
     found_url = URL.query.filter_by(original_url=url_received).first()
 
     if found_url:
