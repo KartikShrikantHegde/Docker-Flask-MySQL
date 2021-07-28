@@ -11,11 +11,6 @@ def base62_encoder(id):
             q = floor(q / base)
             res = characters[int(r)] + res
         return res
-        # hash_str = ''
-        # while id > 0:
-        #     hash_str = characters[id % base] + hash_str
-        #     id //= base
-        # return hash_str
 
 def base62_decoder(id):
     characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
