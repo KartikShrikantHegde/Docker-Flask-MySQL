@@ -70,12 +70,3 @@ Once connected, run simple commands like ```show tables``` or ```desc <<tablenam
 * [pip](https://rometools.github.io/rome/) - Package and dependency manager
 * [MySQL](https://rometools.github.io/rome/) - Database
 
-## Contributing
-
-## Versioning
-
-## Authors
-
-## License
-
-## Acknowledgments
